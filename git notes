@@ -1,0 +1,46 @@
+git --version
+git version 2.25.1
+
+git config --global user.name "Yourname"
+git config --global user.email "Youremail"
+
+git config --global --edit
+
+git init
+git status
+git add filename
+git commit -m "Your Message"
+
+git log
+
+git remote -v
+git remote add origin https://github.com/YourRepo.git
+git branch -M master
+git push -u origin master
+
+
+Generate Access Token from github site
+From your GitHub account, go to Settings => Developer Settings => Personal Access Token => Generate New Token (Give your password) => Fillup the form => click Generate token => Copy the generated Token, it will be something like ghp_sFhFsSHhTzMDreGRLjmks4Tzuzgthdvfsrta
+
+For Linux:
+$ git config --global user.name "your_github_username"
+$ git config --global user.email "your_github_email"
+$ git config -l
+
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+> Cloning into `Spoon-Knife`...
+$ Username for 'https://github.com' : username
+$ Password for 'https://github.com' : give your personal access token here
+
+Now cache the given record in your computer to remembers the token:
+$ git config --global credential.helper cache
+
+If needed, anytime you can delete the cache record by:
+$ git config --global --unset credential.helper
+$ git config --system --unset credential.helper
+
+Now try to pull with -v to verify
+$ git pull -v
+
+Linux/Debian (Clone as follows):
+$ git clone https://<tokenhere>@github.com/dadenewyyt/react-projects.git
